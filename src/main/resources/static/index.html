@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,38 +12,38 @@
     <script src="script.js"></script>
 </head>
 <body>
-<div id="name-form" class="bg-primary d-flex align-items-center" >
+<div id="name-form" class="d-flex align-items-center ios-bg-primary">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4 offset-md-4">
-                <div class="input-group">
-                    <input type="text" placeholder="Enter your name" id="name-value" autofocus class="form-control">
+                <div class="input-group ios-input-group">
+                    <input type="text" placeholder="Enter your name" id="name-value" autofocus class="form-control ios-input">
                     <div class="input-group-append">
-                        <button class="btn btn-dark" id="login">Enter</button>
+                        <button class="btn ios-btn ios-btn-primary" id="login">Enter</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div id="chat-room" class="d-none">
+<div id="chat-room" class="d-none ios-chat-room">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 offset-md-3">
-                <div class="card mt-3">
-                    <div class="card-header">
-                        <h3 id="name-title"></h3>
+                <div class="card mt-3 ios-card">
+                    <div class="card-header ios-card-header">
+                        <h3 id="name-title" class="ios-title"></h3>
                     </div>
-                    <div class="card-body">
-                        <div class="input-group">
-                            <input type="text" placeholder="Enter your message" id="message-value" autofocus class="form-control">
+                    <div class="card-body ios-card-body">
+                        <div class="input-group ios-input-group">
+                            <input type="text" placeholder="Enter your message" id="message-value" autofocus class="form-control ios-input">
                             <div class="input-group-append">
-                                <button class="btn btn-dark" id="send-btn">Send</button>
-                                <button class="btn btn-dark" id="logout">Logout</button>
+                                <button class="btn ios-btn ios-btn-primary" id="send-btn">Send</button>
+                                <button class="btn ios-btn ios-btn-secondary" id="logout">Logout</button>
                             </div>
                         </div>
                         <div class="table-responsive mt-3">
-                            <table id="message-container-table"></table>
+                            <table id="message-container-table" class="table ios-table"></table>
                         </div>
                     </div>
                 </div>

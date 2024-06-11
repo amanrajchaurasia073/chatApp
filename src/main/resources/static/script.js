@@ -21,6 +21,9 @@ function connect() {
         $("#name-form").addClass('d-none');
         $("#chat-room").removeClass('d-none');
 
+        // Add class to body to apply background image
+        $("body").addClass("chat-room-background");
+
         stompClient.subscribe("/topic/return-to", function(response) {
             showMessage(JSON.parse(response.body));
         });
@@ -34,6 +37,10 @@ function showMessage(message) {
 $(document).ready(function() {
     $("#login").click(function() {
         let name = $("#name-value").val();
+        if (name.trim() === "") {
+            alert("Please enter your name.");
+            return;
+        }
         localStorage.setItem("name", name);
         $("#name-title").html(`Welcome, <b>${name}</b>`);
         connect();
@@ -49,6 +56,7 @@ $(document).ready(function() {
             stompClient.disconnect();
             $("#name-form").removeClass('d-none');
             $("#chat-room").addClass('d-none');
+            $("body").removeClass("chat-room-background"); // Remove background image class
             console.log("Disconnected");
         }
     });
